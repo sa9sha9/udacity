@@ -2,33 +2,9 @@
 
 var $ = jQuery;
 var window = this;
-var document = window.document;
-
-var data = {
-  cnt: 0,
-  cats: []
-};
-
 
 document.addEventListener("load", function(event) {
   console.log("All resources finished loading!");
-});
-
-$(function(){
-  //  var cat = new Cat();
-  var cat = new PrototypeCat();
-  $(window).load(function(){
-    console.log("enetr initial Cat");
-    //    cat.initial();
-  });
-  $('.cat_img').click(function(){
-    console.log("enter change cat image");
-    /* 新たな猫ちゃんの場合、新たなインスタンスを生成 */
-    if($(this).parent().attr('data-cnt') == 0) {
-      this.cat = new PrototypeCat();
-    }
-    this.cat.change($(this));
-  });
 });
 
 /** クラス生成
